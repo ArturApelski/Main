@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Lotto {
     public static void main(String[] args) {
         System.out.print("Podaj swoje liczby lotto: ");
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //Wpisujesz swoje liczby do losowanie do loterii
         int twojLos = scanner.nextInt();
         int[] pamiec = new int[6];
         Random liczba = new Random();
@@ -19,10 +19,10 @@ public class Lotto {
             pamiec[i] = los;
             System.out.print(pamiec[i] + " ");
 
-            if(twojLos != los) {
+            if(twojLos != los) { //Jeśli Twoje liczby nie są identyczne z liczbami w loterii, niestety nie wygrałeś szóstki w loterii.
                 System.out.println("Niestety nie dopisało ci szczęście!");
             }
-            if (twojLos ==  los) {
+            if (twojLos ==  los) { //Jesli twoje liczby są takie same z liczbami w loterii, Brawo wygrałeś szóstke.
                     System.out.println("Brawo wygrałeś 1 000 000 $!!!!!!!");
 
             }
