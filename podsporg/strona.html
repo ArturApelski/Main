@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <style>
+            body{
+                background-color: green
+            
+            }
+            
+        </style>
+        <center><h1>Oblicznie ceny remontu</h1></center>
+    
+        <a href="REG.pdf"><h4>REGULAMIN SERWISU</h4></a><br><br>
+
+    
+        <input type = "number" id = "Wysokość">Podaj wysokość pomieszczenia w m<br><br>
+        <input type = "number" id = "Szerokość">Podaj szerokość pomieszczenia w m<br><br>
+        
+        <p>Jaki rodzaj płytek?</p>
+        <input type="checkbox" name="Glazura" value="typpłytki">Glazura (100zł za m<sup>2</sup>)<br>
+        <input type="checkbox" name="Terakota" value="typpłytki">Terakota (100zł za m<sup>2</sup>)<br>
+        <input type="checkbox" name="Gres" value="typpłytki">Gres (100zł za m<sup>2</sup>)<br>
+        <input type="checkbox" name="Płytki klinkierowe" value="typpłytki">Płytki klinkierowe (100zł za m<sup>2</sup>)<br>
+        <input type="checkbox" name="Marmur" value="typpłytki">Marmur (100zł za m<sup>2</sup>)<br>
+        
+        
+    
+        <p>Jaki odcień farby wybierasz?</p>
+        <input type="checkbox" name="Biel" value="kolor">Biel (50zł)<br>
+        <input type="checkbox" name="Szarość" value="kolor">Szarość (50zł)<br>
+        <input type="checkbox" name="Czerwień" value="kolor">Czerwień (50zł)<br>
+        <input type="checkbox" name="Niebieski" value="kolor">Niebieski (50zł)<br>
+        <input type="checkbox" name="Róż" value="kolor">Róż (50zł)<br>
+        <br>
+
+          
+        <input type="reset" value="Wyczyść dane"><br>
+
+        <center> <span style="color: black;"> WYCENA REMONTU</span><br> </center>
+        
+        <center> <button type="button" style="width: 135px; height: 120px;" onclick="Wycena()" value="Wycena" id="Wycena">Wyceń</button></center>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <p>Autorami są Artur Apelski i Krystian Jabłoński. Wszelkie prawa zastrzeżone są prawami autorskimi.</p><br>
+
+        <script>
+            function Wycena(){
+                const Wysokość = document.getElementById("Wysokość").value
+                const Szerokość = document.getElementById("Szerokość").value
+                
+
+                let kosztkoloru = kolor * 50
+
+                let kosztpłytek = typpłytki * 100
+                
+                let robocizna = (Wysokość * Szerokość)* 20
+                koszty.innerHTML = robocizna + kosztkoloru + kosztpłytek
+            }
+        </script>
+
+
+        </form>
+</body>
+</html\
